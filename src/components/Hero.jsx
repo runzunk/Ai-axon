@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Brain, TrendingUp, Code, Cloud } from 'lucide-react';
 
 const Hero = () => {
     const canvasRef = useRef(null);
@@ -286,6 +287,35 @@ void main(){
                 <canvas id="landscape-canvas" ref={canvasRef}></canvas>
             </div>
             <div className="hero-content">
+                {/* Mobile Specific Decorators */}
+                <div className="mobile-decor mobile-top-left">
+                    <span>IDEAS</span>
+                    <span>+</span>
+                    <span>AI</span>
+                    <span>=</span>
+                    <span className="highlight-text">REAL IMPACT</span>
+                </div>
+
+                <div className="mobile-decor mobile-top-right">
+                    <span>Build</span>
+                    <span>Smarter</span>
+                    <span>Tomorrow</span>
+                </div>
+
+                <div className="mobile-decor mobile-right-icons">
+                    <Brain className="m-icon" />
+                    <TrendingUp className="m-icon" />
+                    <Code className="m-icon" />
+                    <Cloud className="m-icon" />
+                </div>
+
+                <div className="mobile-decor mobile-bottom-left">
+                    <span>YOUR</span>
+                    <span className="highlight-text">IDEAS</span>
+                    <span>OUR</span>
+                    <span>INTELLIGENCE</span>
+                </div>
+
                 <div className="hero-center">
                     <div>
                         <div className="center-logo">

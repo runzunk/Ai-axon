@@ -775,6 +775,17 @@ a {
     display: none;
 }
 
+/* Mobile Decor Elements (Hidden on Desktop) */
+.mobile-decor {
+    display: none;
+    position: absolute;
+    font-family: var(--font-heading);
+    color: rgba(255, 255, 255, 0.6);
+    letter-spacing: 0.2em;
+    font-size: 0.65rem;
+    z-index: 10;
+}
+
 @media (max-width: 1024px) {
     .feature-bar {
         flex-wrap: wrap;
@@ -888,5 +899,65 @@ a {
     .footer-links {
         flex-wrap: wrap;
         justify-content: center;
+    }
+    
+    /* Mobile Hero Decor Styles */
+    .mobile-decor {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .mobile-top-left {
+        top: 100px;
+        left: 20px;
+        border-left: 1px solid var(--neon-green);
+        padding-left: 12px;
+        gap: 4px;
+    }
+
+    .mobile-top-left .highlight-text,
+    .mobile-bottom-left .highlight-text {
+        color: var(--neon-green);
+    }
+
+    .mobile-top-right {
+        top: 100px;
+        right: 20px;
+        font-family: 'Brush Script MT', 'Caveat', 'Dancing Script', cursive;
+        font-style: italic;
+        text-transform: capitalize;
+        letter-spacing: 0.05em;
+        font-size: 1.4rem;
+        align-items: flex-end;
+        line-height: 1.1;
+        transform: rotate(-5deg);
+        color: rgba(255,255,255,0.8);
+    }
+
+    .mobile-right-icons {
+        top: 250px;
+        right: 20px;
+        gap: 25px;
+        color: var(--neon-green);
+        align-items: center;
+    }
+
+    .mobile-right-icons .m-icon {
+        width: 16px;
+        height: 16px;
+        opacity: 0.7;
+    }
+
+    .mobile-bottom-left {
+        bottom: 220px;
+        left: 20px;
+        border-left: 1px solid var(--neon-green);
+        padding-left: 12px;
+        gap: 4px;
+    }
+
+    .hero-center {
+        transform: scale(0.9);
+        margin-top: -30px;
     }
 }
