@@ -1,5 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Brain, TrendingUp, Code, Cloud } from 'lucide-react';
+import mobileBg from '../assets/mobile-bg.png';
 
 const Hero = () => {
     const canvasRef = useRef(null);
@@ -283,6 +284,9 @@ void main(){
 
     return (
         <section id="home" className="hero">
+            <div className="mobile-bg-image">
+                <img src={mobileBg} alt="Mobile Background" />
+            </div>
             <div className="scene">
                 <canvas id="landscape-canvas" ref={canvasRef}></canvas>
             </div>
